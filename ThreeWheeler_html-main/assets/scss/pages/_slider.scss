@@ -1,0 +1,182 @@
+// Slider styles
+.slick-dots {
+    position: static;
+    margin-bottom: 3rem;
+    li {
+        margin: 0;
+        height: auto;
+        width: 3.2rem;
+        button {
+            &:before {
+                font-size: 4rem;
+                line-height: 2rem;
+                content: "";
+                background-color:var(--grey-5);
+            }
+        }
+    }
+} 
+.slick-prev,
+.slick-next {
+    top: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, var(--white) 4%, var(--white) 96%);
+        border-radius: 50%;
+        width: 4rem;
+        height: 4rem;
+    &:before {       
+        font-family: "3w-icons";
+        @include font(4rem, normal, var(--grey-1));
+        opacity: 100; 
+    }
+    &:hover, &:focus{
+        background: linear-gradient(to right, var(--white) 4%, var(--white) 96%);
+    }
+    @include bp(sm) {
+        background: linear-gradient(to right, var(--white) 4%, var(--white) 96%);
+        &:hover, &:focus{
+            background: linear-gradient(to right, var(--white) 4%, var(--white) 96%);
+        }
+    }
+}
+
+.slick-prev {
+    left: 0rem;
+    z-index: 1;
+    &:before {
+        content: "\e933";
+    }
+}
+
+.slick-next {
+    right: 0rem;
+    z-index: 1;
+    &:before {
+        content: "\e92d";
+    }
+}
+
+.slick-dots {
+    li {
+        button {
+            &:before {
+                color: var(--grey-6);
+                opacity: 100;
+                background-color:var(--grey-6); 
+                width: 2rem;
+                height: 0.5rem;
+                border-radius: 1rem;
+            }
+        }
+        &.slick-active button {
+            &:before {
+                color: var(--grey-1);
+                opacity: 100;
+                background-color:var(--grey-1);
+                width: 2rem;
+                height: 0.5rem;
+                border-radius: 1rem;
+            }
+        }
+    }
+}
+.accessories-slider{
+    .slick-dots {
+        bottom: inherit;
+        top: 22%;
+        right: auto;
+        left: 50%;
+        margin: 0 auto;
+        max-width: max-content;
+        position: absolute;
+        li {
+            width: 4.5rem;
+            button {
+                &:before {
+                    color: var(--grey-7);
+                    opacity: 100;
+                    background-color:var(--grey-7); 
+                    width: 3rem;
+                    height: 0.22rem;
+                    border-radius: 1rem;
+                }
+            }
+            &.slick-active {
+                button {
+                    &:before {
+                        color: var(--blue);
+                        opacity: 100;
+                        background-color:var(--blue);
+                        width: 3rem;
+                        height: 0.22rem;
+                        border-radius: 1rem;
+                    }
+                }
+            }
+        }
+    }
+    .slick-prev,
+    .slick-next {
+        top: auto; 
+        bottom: 25%;
+        background: transparent;
+    }
+    .slick-next {
+        right: 40%;
+        z-index: 1;
+    }
+    .slick-prev {
+        left: 50%;
+        z-index: 1;
+    }
+    @include bp(md) {
+        .slick-prev,
+        .slick-next {
+            top: inherit;
+            bottom: -20%;
+            margin: 0 auto;
+        }
+        .slick-dots {
+            right: 0%;
+            left: 0%;
+            margin: 0 auto;
+            bottom: 25%;
+            top: auto;
+        }
+        .slick-next {
+            right: 38%; 
+        }
+        .slick-prev {
+            left: 38%; 
+        }
+    }
+}
+@include bp(sm) {
+    .slick-prev,
+    .slick-next {
+        top: 50%;
+        @include square(auto);
+        &:before {
+            @include font(3rem);
+        }
+    }
+    .slick-prev {
+        left: 0rem;
+    }
+    .slick-next {
+        right: 0rem;
+    }
+    .slick-dots {
+        margin-bottom: 0;
+        li {
+            button {
+                &:before {
+                    font-size: 2.2rem;
+                    line-height: 1.1rem;
+                }
+            }
+        }
+    } 
+}

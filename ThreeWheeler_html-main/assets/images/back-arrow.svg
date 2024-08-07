@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52">
+  <g id="Group_112" data-name="Group 112" transform="translate(-98 -1993)">
+    <g id="Ellipse_7" data-name="Ellipse 7" transform="translate(98 1993)" fill="#fff" stroke="#192841" stroke-width="2">
+      <circle cx="26" cy="26" r="26" stroke="none"/>
+      <circle cx="26" cy="26" r="25" fill="none"/>
+    </g>
+    <path id="chevron_right_FILL0_wght400_GRAD0_opsz48" d="M30.4,36.026a1.943,1.943,0,0,0,.446-1.155,1.422,1.422,0,0,0-.446-1.1l-9.242-9.242,9.294-9.294a1.445,1.445,0,0,0,.394-1.129,1.615,1.615,0,0,0-.446-1.129,1.483,1.483,0,0,0-1.129-.5,1.586,1.586,0,0,0-1.076.5l-10.45,10.45a1.6,1.6,0,0,0-.368.525,1.641,1.641,0,0,0,0,1.155,1.6,1.6,0,0,0,.368.525l10.4,10.4a1.422,1.422,0,0,0,1.1.446A1.943,1.943,0,0,0,30.4,36.026Z" transform="translate(99.726 1994.526)" fill="#192841"/>
+  </g>
+</svg>

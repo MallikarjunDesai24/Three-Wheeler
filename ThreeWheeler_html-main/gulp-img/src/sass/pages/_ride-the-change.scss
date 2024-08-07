@@ -1,0 +1,404 @@
+.ride-change-wrapper {
+    padding-top: 6rem;
+    padding-bottom: 0rem;
+    @include bg-img(url('../images/map.png'),
+    center center,
+    cover);
+    &.bg-none {
+        .curve {
+            &.top {
+                width: 100%;
+                background: var(--white);
+                height: 16rem;
+                content: '';
+            } 
+        }
+        @include bp(md) {
+            .curve {
+                &.top {
+                    width: 100%;
+                    background: var(--white);
+                    height: auto;
+                    content: '';
+                }
+            }
+        }
+    }
+    .dealer-section{
+        padding: 0 0 5rem 0rem;
+    }
+    .card {
+        @include radius(2rem); 
+        border: 0px solid #3131313b; 
+        background: var(--white);
+        border: 2px solid var(--white);
+        .card-body {
+            padding: 5rem 3rem 3rem;
+        }
+        position: relative;
+    }
+    .location {
+        position: absolute;
+        top: -28px;
+        left: calc(50% - 3rem);
+        background: var(--white);
+        border-radius: 50%;
+        padding-top: 0.6rem;
+        padding-left: 0.1rem;
+        i {
+            font-size: 4rem;
+            @include gradient-text(var(--primary-green),
+            var(--secondary-green));
+        }
+    } 
+    .sub-title {
+        @include font(2.4rem,
+        400,
+        var(--grey-1));
+        position: relative;
+        padding-bottom: 1rem;
+        margin-bottom: 4rem;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 7rem;
+            height: .2rem;
+            background: var(--tertiary-blue);
+            @include translate(-50%,
+            0%);
+        }
+    }
+    .dealership-search {
+        margin: 0rem 0 0 auto;
+        align-items: center;
+        display: flex;
+        input {
+            font-weight: 400;
+            border: 2px solid var(--grey-11);
+            @include radius(1rem);
+            @include shadow(none);
+        }
+        .nearby-dealer {
+            text-align: right;
+            .btn-sm{
+                @include font(1.8rem, 500, var(--white));
+            }
+        }
+    }
+    .radio-card {
+        white-space: inherit;
+        .radio-card-inner {
+            @include radius(1rem);
+            padding: 2.5rem 1.5rem 2.7rem;
+            @include shadow(none);
+        }
+        .large-text {
+            @include font(1.8rem)
+        }
+        .small-text {
+            @include font(1.4rem)
+        }
+    }
+     
+    @include bp(md) { 
+        .sub-title {
+            @include font(1.8rem);
+        } 
+        [class*=col] {
+            margin-top: 0;
+        }
+        .radio-card {
+            .radio-card-inner {
+                padding: 1.2rem 1rem 1.5rem;
+                .small-text {
+                    @include font(1.2rem);
+                }
+            }
+            .large-text {
+                @include font(1.6rem,
+                400,
+                null);
+            }
+        }
+        .dealership-search { 
+            margin: 3rem auto;
+            .mobile-dealer{
+                flex-direction: column;
+            }
+            input {
+                max-height: 5rem;
+                @include radius(0.8rem);
+                @include font(1.8rem);
+                min-width: 29rem;
+                height: 5rem;
+            }
+            .nearby-dealer {
+                text-align: center;
+                margin-top: 1rem;
+                .btn {
+                    .icon-dealerdetect{
+                        margin-right: 1rem;
+                    }
+                    width: auto;
+                    @include font(2rem);
+                    padding: 1rem 2rem;
+                }
+            }
+        }
+        .location {
+            position: absolute;
+            top: -2.2rem;
+            left: calc(50% - 2rem);
+            i {
+                font-size: 4rem;
+                @include gradient-text(var(--primary-green),
+                var(--secondary-green));
+            }
+        } 
+        .dealer-section{
+            padding: 0rem;
+        }
+    }
+    @include bp(sm) {
+        padding-top: 5rem;
+        padding-bottom: 0rem;
+        
+        .card {
+            .card-body {
+                padding: 5rem 1.5rem 2rem;
+            }
+        }
+ 
+        .sub-title {
+            @include font(1.6rem);
+            max-width: 14rem;
+            margin: 0 auto 3rem;
+        }
+        .address-info {
+            min-height: 0;
+            margin-bottom: 1.5rem;
+            padding: 3rem 3rem 0rem;
+            h5 {
+                @include font(1.6rem);
+                margin-bottom: 1rem;
+            }
+            p {
+                @include font(1.2rem);
+                line-height: 2.2rem;
+            }
+        }
+    }
+}
+
+.nearest-search-results {
+    h3 {
+        @include font(1.8rem,
+        400,
+        var(--logo-blue));
+        margin-bottom: 1.5rem;
+    }
+    .radio-card {
+        .radio-card-inner {
+            padding: 1.5rem;
+            @include radius(1.5rem);
+            white-space: normal;
+            .large-text {
+                @include font(1.8rem);
+                margin-bottom: 1.6rem;
+            }
+            .small-text {
+                @include font(1.4rem);
+            }
+        }
+    }
+}
+
+.or-this {
+    @include font(1.6rem,
+    500,
+    var(--grey-1));
+    margin: 0 2rem;
+    &.llg {
+        @include font(1.6rem,
+        500,
+        var(--grey-1));
+        margin: 2rem .5rem;
+    }
+}
+
+.detect-pin { 
+    input {
+        width: 25rem;
+    }
+    .nearby-dealer {
+        .btn {
+            width: 30rem;
+            background: linear-gradient(to right, var(--blue), var(--blue-01));
+            color: var(--white);
+            @include radius(1rem);
+            @include shadow(none);
+            height: 5rem;
+            align-items: center;
+            display: flex;
+            justify-content: space-evenly;
+            .icon-dealerdetect{
+                @include font(2rem);
+            }
+        }
+    }
+    .btn {
+        &.login-btn {
+            background: linear-gradient(to right, var(--blue), var(--blue-01));
+            @include shadow(none);
+            color: var(--white);
+            @include radius(.7rem);
+            height: 4rem;
+            width: 4rem;
+            i{
+                &.icon-right-next{
+                    @include font(2rem);
+                }
+            }
+        }
+    }
+}
+
+.pincode-info {
+    @include font(1.2rem,
+    400,
+    var(--grey-15));
+    justify-content: center;
+    i {
+        @include gradient-text(var(--brand-color),
+        var(--brand-color));
+        @include font(1.8rem);
+        margin-right: .5rem;
+    }
+}
+
+@include bp(md) {
+    .pincode-info {
+        justify-content: start;
+        @include font(1.1rem);
+        i {
+            @include font(1.7rem);
+            align-self: flex-start;
+        }
+    }
+    .nearest-search-results {
+        h3 {
+            @include font(1.6rem,
+            400,
+            null);
+            margin-bottom: 1rem;
+        }
+        .radio-card {
+            max-width: 100%;
+            .radio-card-inner {
+                padding: 1.5rem;
+                &.with-icon {
+                    .radio-btn-icon {
+                        top: 1.5rem;
+                        @include font(2rem);
+                    }
+                }
+                .large-text {
+                    @include font(1.6rem);
+                    margin-bottom: .8rem;
+                    padding-right: 0;
+                }
+                .small-text {
+                    @include font(1.2rem);
+                }
+            }
+        }
+    }
+    .or-this {
+        margin: 2rem .5rem;
+        @include font(1.8rem, 700, var(--grey-1));
+        &.llg {
+            margin-bottom: 1.5rem;
+            margin-top: 0;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+.htr-inputs {
+    margin-top: -2rem;
+}
+
+@include bp(sm) {
+    .detect-pin {
+        margin-bottom: 2rem;
+        input {
+            max-width: max-content;
+        }
+        .nearby-dealer {
+            text-align: center;
+            margin-top: 0;
+            .btn {
+                width: auto;
+            }
+        }
+    }
+    .htr-inputs {
+        margin-top: -.5rem;
+    }
+}
+
+.web-icon-list{
+    display: flex;
+    @include bp(md) {
+        display: none;
+    }
+}
+.mobile-icon-list{
+    display: none;
+    @include bp(md) {
+        display: flex;
+        .btn-with-icon{
+            margin-right: 2rem;
+        }
+    }
+}
+.small-text{
+    &.tooltip-text{
+        text{
+            display: none;
+        }
+        &:hover{
+            text{
+                display: block;
+            }
+        }
+    }
+}
+
+.small-text-tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 0px dotted black;
+  }
+  
+  .small-text-tooltip .small-tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: var(--white);
+    color: var(--grey-1);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .small-text-tooltip:hover .small-tooltiptext {
+    visibility: visible;
+    text-decoration: none;
+}

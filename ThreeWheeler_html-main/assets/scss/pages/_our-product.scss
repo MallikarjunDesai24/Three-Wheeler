@@ -1,0 +1,352 @@
+.our-product {
+    padding-top: .5rem;
+    padding-bottom: 0rem;
+    background-image: linear-gradient(to bottom, var(--white) 8%, var(--grey-7) 96%);
+    .container{
+        .row{
+            .col-lg-12 {
+                &.pl-0{
+                    padding-left: 1.5rem!important;
+                }
+            }
+        }
+    }
+    @include bp(md) {
+        padding-top: 5rem;
+        padding-bottom: 0rem;
+        &>.col-lg-12{
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .container{
+            .row{
+                .col-lg-12 {
+                    &.pl-0{
+                        padding-left: 0rem!important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.section-title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    &:before {
+        content: '';
+        background: var(--red-01);
+        height: auto;
+        position: absolute;
+        left: -0.5rem;
+        width: 6px; 
+        top: 0;
+        bottom: 0; 
+        min-height: 5rem;
+    } 
+    h2 {
+        @include font(2.4rem, 400, var(--red-01));
+        margin: 0;
+        padding: 0 0 0 1rem;
+        line-height: 1;
+    }
+    span {
+        @include font(2.4rem, 500, var(--red-01));
+        margin: 0;
+        padding: 0rem;
+        line-height: 1;
+        display: block;
+    }
+    h3 {
+        @include font(3.2rem, 700, var(--grey-1));
+        margin: 0;
+        padding: 0 0 0 1rem;
+        line-height: 1;
+    }
+    h1 {
+        @include font(3.2rem, 700, var(--grey-1));
+        margin: 0;
+        padding: 0 0 0 1rem;
+        line-height: 1;
+    }
+    &.product-web{
+        display: flex;
+    }
+    &.product-mobile{
+        display: none;
+    }
+    &.ev-title{
+        &:before { 
+            background: var(--ev-color);
+        }
+        h2 {
+            @include font(2.4rem, 400, var(--grey-1));
+        }
+        span {
+            @include font(2.4rem, 400, var(--grey-1));
+            display: block;
+        }
+        h3 {
+            @include font(3.2rem, 700, var(--ev-color));
+        }
+        h1 {
+            @include font(3.2rem, 700, var(--ev-color));
+        }
+    }
+    @include bp(md) {
+    padding-left: 0.5rem;
+        &:before {
+            left: 0;
+        }
+        &.product-web{
+            display: none;
+        }
+        &.product-mobile{
+            display: flex;
+            padding: 0;
+            margin-top: 2rem;
+        }
+        h2 {
+            @include font(2rem);
+        } 
+        span {
+            @include font(2rem);
+        }
+        h3 {
+            @include font(2.4rem);
+        }
+        h1 {
+            @include font(2.4rem);
+        }
+    }
+}
+.our-product-image-tabs{
+    margin-top: 4rem;
+    .container{
+        .col-md-12{
+            width: 96rem;
+            max-width: 96rem;
+            margin: 0 auto;
+        }
+    }
+    @include bp(md) {
+        margin-top: 2rem;
+        padding-bottom: 1rem;
+    }
+}
+
+.our-product-image-slider {
+    margin-top: 4rem;
+    .slick-slide {
+        .our-product-image {
+            padding: 0rem;
+            img {
+                cursor: pointer;
+                display: inline-block;
+                width: 14rem;
+                max-height: 9rem;
+            }
+            .product-img {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                @include radius(1rem);
+                border: solid 2px var(--grey-8);
+                background-image: linear-gradient(to right, var(--white) 4%, var(--grey-7) 96%);
+                margin: 0 1.5rem;
+                padding: 1.5rem 1rem;
+                cursor: pointer;
+                h3{
+                    @include font(2.4rem, 600, var(--grey-1)); 
+                    margin: 0 auto;
+                }                
+                .product-img-inner {
+                    margin-top: 0rem;
+                    margin-right: 1.5rem;
+                }
+            }
+            @include bp(md) {
+                padding: 2rem 0rem;
+                img {
+                    width: 11rem;
+                }
+                .product-img {
+                    h3{
+                        @include font(2rem, 700, var(--grey-1));
+                    }
+                }
+            }
+        }
+
+        &.slick-current {
+            .our-product-image {
+                img {
+                    cursor: pointer;
+                    display: inline-block; 
+                }
+                .product-img {  
+                    border: solid 2px var(--blue);
+                    background-image: linear-gradient(to right, var(--white) 4%, var(--grey-7) 96%); 
+                    h3{
+                        color: var(--grey-1); 
+                    }
+                    .product-img-inner {
+                        margin-top: 0rem;
+                    }
+                }
+            }
+        }
+    }
+    @include bp(md) {
+        margin-top: 2rem;
+    }
+}
+
+.our-product-text-slider {
+    margin: auto;
+    padding: 0;
+    position: relative;
+    z-index: 9;
+}
+
+.our-product-text { 
+    .dura-max-bg {
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: 130% 0%; 
+    }
+    .product-logo {
+        max-width: 26rem;
+        padding-bottom: 2rem;
+        padding-top: 9rem;
+        img {
+            max-width: 100%;
+        }
+    }
+    .product-text {
+        display: flex;
+        padding: 1rem 0rem 0 3rem;
+        width: 100%; 
+        .product-left {
+            max-width: 35rem; 
+            padding-top: 7rem;
+        }
+        .product-right {
+            max-width: 67rem;
+            width: 67rem;
+            margin: 0rem 0 0 auto;
+            img{
+                max-width: 100%;
+            }
+        }
+    }
+    @include bp(md) {
+        .container{
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .dura-max-bg {
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 40% 5%; 
+        }
+        .product-logo {
+            max-width: 20rem;
+            padding-bottom: 2rem;
+            padding-top: 4rem;
+            margin: 0 auto 10rem;
+        }
+        .product-text {
+            flex-wrap: wrap-reverse;
+            padding: 0rem;
+            .product-left {
+                padding-top:3rem;
+                width: 100%;
+            }
+            .product-right {
+                max-width: 34rem;
+                width: 34rem;
+                margin: auto;
+                img{
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.product-icon-text {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 0 1.5rem;
+    border-bottom: 1px solid var(--grey-9);
+    i {
+        @include font(3.6rem, 500, var(--blue));
+        width: 3.5rem;
+        height: 4.5rem;
+        align-items: center;
+        display: flex; 
+        &.icon-luggage-boot, &.icon-superior-suspension, &.icon-compact-design{
+            @include font(2.6rem);
+        }
+        &.icon-enhanced-passenger-space{
+            @include font(2.2rem);
+        }
+    }
+    &-inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        padding-left: 2rem; 
+         span {
+            @include font(2rem, 600, var(--grey-1));
+            text-align: left;
+
+            &+span {
+                @include font(1.8rem, 400, var(--grey-1));
+                text-align: left;
+            }
+        }
+
+    }
+
+    &:last-child {
+        border-bottom: 0px solid var(--grey-9);
+    }
+    @include bp(md) {
+        padding: 1rem 0rem 1rem;
+        i {
+            @include font(3rem, 600, var(--blue));
+            min-width: 4rem;
+            justify-content: center;
+            &.icon-battery-technology, &.icon-luggage-boot, &.icon-luggage-boot, &.icon-compact-design, &.icon-superior-suspension, &.icon-payload-suspension{
+                @include font(2.6rem, 500, var(--blue));
+            }
+            &.icon-enhanced-passenger-space{
+                @include font(2.2rem);
+            }
+        }
+        &-inner { 
+            padding-left: 1rem; 
+             span {
+                @include font(1.8rem, 700, var(--grey-1));  
+                &+span {
+                    @include font(1.6rem, 400, var(--grey-1)); 
+                }
+            } 
+        }
+    }
+}
+
+.know-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0;
+    @include bp(md) {
+        justify-content: center;
+        padding: 1rem 0 2rem;
+    }
+}

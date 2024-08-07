@@ -1,0 +1,287 @@
+.modal {
+  @include bp(md-min) {
+    .modal-dialog {
+      max-width: 67.5rem;
+
+      &.full-screen {
+        max-width: 116rem;
+
+        .modal-body {
+          padding: 6rem 2rem 2rem 2rem;
+          
+        }
+
+        .modal-header {
+          margin-bottom: -2rem;
+        }
+
+        .actions {
+          .btn {
+            min-width: 18rem;
+          }
+        }
+      }
+
+      &.video-popup {
+        max-width: 76rem;
+      }
+
+      iframe {
+        height: 39.3rem;
+      }
+    }
+  }
+&.validpin{
+  .modal-dialog {
+    max-width:40rem;
+    .modal-body{
+      padding: 2rem 2rem 3rem;
+    }
+  }
+}
+  .modal-header {
+    border-bottom: none;
+    padding: 4rem 2rem 0;
+    margin-bottom: -1rem;
+  }
+
+  .modal-content {
+    @include radius(0.5rem);
+  }
+
+  .modal-title {
+    @include font(3rem, 500, var(--grey-1)); 
+  }
+
+  .defalt-icon {
+    @include font(11rem, 400, var(--grey-1));
+
+    &.sm {
+      @include font(4.5rem);
+    }
+  }
+
+  .red-icon {
+    @include gradient-text(var(--red-2), var(--red-1));
+  }
+
+  .modal-body { 
+    padding: 5rem 2rem;
+    .text-danger{
+      &.error{
+        font-size: 1.4rem; 
+        display: flex;
+        justify-content:center;
+        max-width: 30rem;
+        margin: 1rem auto 2rem;
+      }
+    }
+    &.booking {
+      padding-left: 5rem;
+      padding-right: 5rem; 
+
+      .booking-form {
+        padding: 0;
+
+        .select-box:before {
+          background: var(--white);
+          padding-left: .5rem;
+          pointer-events: none;
+        }
+      }
+    }
+
+    h4 {
+      @include font(2.4rem, 300, var(--grey-1));
+      margin-bottom: 2rem;
+    }
+
+    p {
+      @include font(1.6rem, 400, var(--grey-1));
+      margin-bottom: 2.5rem;
+
+      &.info-text {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 5rem;
+
+        a {
+          @include font(1.8rem, 500, var(--btn-primary-end-color));
+        }
+      }
+
+      &.main-text {
+        @include font(1.8rem);
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .info-sm {
+      @include font(1.2rem, 400, var(--grey-1));
+    }
+
+    .info-md {
+      @include font(1.4rem, 400, var(--grey-1));
+    }
+
+    .popup-divider {
+      border-top: 1px solid var(--grey-16);
+    }
+
+    .error-info {
+      i {
+        @include font(5rem);
+        @include gradient-text(var(--red-2), var(--red-1));
+      }
+    }
+
+    &.video-popup-body {
+      padding: 7rem 3rem 3rem 3rem;
+    }
+
+    .otp-wrapper{
+      .otp-w{
+        width: 30rem;
+        margin: 0 auto;
+      }
+      span {
+          font-size: 1.6rem;
+          line-height: 2rem;
+          font-weight: 400;
+          color: var(--grey-11);
+          margin-bottom: 1rem;
+      }
+    }
+
+    @include bp(md) {
+      padding: 3rem 1.8rem 4rem;
+      .text-danger{
+        &.error{
+          font-size: 1.4rem; 
+          display: flex;
+          justify-content: center;
+          max-width: 30rem;
+          margin: 1rem auto 2rem;
+        }
+      }
+    }
+  }
+
+  .close {
+    position: absolute;
+    @include font(3rem, null, var(--grey-2));
+    right: 1.2rem;
+    font-size: 3rem;
+    top: 1.2rem;
+    opacity: 1;
+    z-index: 10;
+  }
+
+
+  @include bp(sm) {
+    .modal-dialog {
+      margin: .5rem 1rem;
+
+      &.full-screen {
+        max-width: 100%;
+        margin: 0;
+
+        .modal-body {
+          padding: 4rem 1.5rem 1.5rem 1.5rem;
+        }
+
+        .modal-content {
+          border-radius: initial;
+        }
+
+        .close {
+          left: 1.2rem;
+          margin: 0 0 0 -8px;
+        }
+      }
+
+      .defalt-icon {
+        @include font(8rem);
+
+        &.sm {
+          @include font(4rem);
+        }
+      }
+
+      iframe {
+        width: 100%;
+        height: 40rem;
+      }
+    }
+
+    .modal-header {
+      padding: 2.6rem 2rem 0;
+      margin-bottom: 0;
+    }
+
+    .modal-title {
+      @include font(2.2rem, 300, var(--grey-1));
+    }
+
+    .close {
+      font-size: 2.5rem;
+    }
+
+
+    .modal-body {
+      h4 {
+        margin-bottom: .5rem;
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+      }
+
+      p {
+        margin-bottom: 1.5rem;
+        font-size: 1.4rem;
+
+        &.main-text {
+          @include font(1.4rem);
+          margin-bottom: 1rem;
+        }
+      }
+
+      &.video-popup-body {
+        padding: 4rem 1.8rem 1.6rem 1.8rem;
+      }
+
+      p {
+        &.info-text {
+          @include font(1.3rem);
+          margin-left: 0;
+          margin-right: 0;
+          margin-bottom: 4.5rem;
+        }
+      }
+    }
+  }
+}
+
+.actions{
+  .otp-resend{
+    margin: 0 .75rem;
+    @include bp(md) {
+      margin: 0.6rem 0rem;
+    }
+  }
+}
+ 
+  @include bp(md){
+    .actions{
+      .btn{
+        &.btn-with-icon {
+          &.btn-sm {
+            &.mr-4{
+              margin-right: 0rem!important;
+              margin-bottom: 1.5rem;
+              min-width: 18rem;
+            }
+          }
+        }   
+      }
+    }
+  } 

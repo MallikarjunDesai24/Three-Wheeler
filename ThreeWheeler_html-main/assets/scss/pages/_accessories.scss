@@ -1,0 +1,109 @@
+.accessories{
+    padding-top:6rem;
+    padding-bottom: 4rem;  
+    position: relative; 
+    z-index: 1; 
+    .accessories-slider-wrapper {
+        padding: 1rem 0 0rem;
+        position: relative;   
+    }
+    .content-wrapper {
+        padding-left: 0rem;
+        padding-right: 0rem;
+        .redefine-content{
+            padding-top: 6rem;
+            max-width: 42rem;
+        }
+        h4 {
+            @include font(3rem,
+            600,
+            var(--grey-1));
+            margin-bottom: 3rem; 
+        }
+        p {
+            @include font(1.8rem,
+            500,
+            var(--grey-1)); 
+            margin-bottom: 0rem;
+        }
+        @include bp(lg-min) {
+            .redefine-content{
+                padding-top: 3rem; 
+            }
+        }
+    }
+    @include bp(md) {   
+        padding-top: 5rem;
+        .accessories-slider-wrapper{
+            padding: 1rem 0rem 0rem;
+        }
+        .content-wrapper {
+            h4 {
+                @include font(1.6rem, 600, var(--grey-1));
+                margin-bottom: 1rem; 
+                text-align: center;
+            }
+            p {
+                @include font(1.4rem, 400, var(--grey-1));
+                text-align: center;
+            }
+            .redefine-content{
+                padding-top: 3rem;
+            }
+        }
+    }
+}
+.accessories-slider {
+    .item-img {
+        padding: 1.5rem 5rem 0 0rem;
+        padding-top: 3.5rem;
+        img {
+            display: inline-block;
+            max-height: max-content;
+            max-width: 100%;
+            @include radius(1rem);
+        }
+        @include bp(md) {
+            padding-top: 5rem;
+        }
+        @include bp(sm) {
+            padding: 2.5rem 0rem 0rem;
+            img {
+                max-height: 25rem;
+                max-width: 100%;
+                width: auto;
+            }
+        }
+        @include bp(lg-min) {
+            &.divider {
+                position: relative;
+                &:after,
+                &:before {
+                    content: "";
+                    position: absolute;
+                    right: 0;
+                    z-index: -1;
+                }
+                &:after {
+                    height: 100%;
+                    width: 100%;
+                    top: 0; 
+                } 
+            }
+        }
+        @include bp(lg) {
+            &.divider {
+                &:after {
+                    background: transparent;
+                }
+            }
+        }
+        @include bp(lg-md-min) {
+            padding-top:2rem;
+            .slick-prev,
+            .slick-next {
+                top: 45%;
+            }
+        }
+    }
+}

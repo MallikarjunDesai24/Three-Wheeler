@@ -1,0 +1,163 @@
+.feature-faq{
+    @include bg-img(url('../images/feature-bg.png'),
+        center center,
+        cover);
+        background-attachment: fixed;
+        
+}
+.faq-section{
+    padding-top: 14rem;
+    padding-bottom: 0rem;
+    @include bp(md) {
+        padding-top: 10rem;
+        .tabs-sm{
+            padding-bottom:0rem;
+        }
+    }
+}
+.review-wrapper{
+    @include bp(md) {
+        .faq-section{
+            padding-bottom: 0rem;
+            .nav{
+                margin-bottom: 0rem;
+            }
+        } 
+    }
+}
+.faq-search{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0 6rem;
+    @include bp(md) {
+        flex-direction: column;
+        padding: 1rem 0 3rem;
+        .search-holder{
+            margin: 3.5rem 0rem 1rem;
+            &::before{
+                top: 50%;
+                height: 3.8rem;
+                @include radius(.5rem);
+            }
+        }
+    }
+}
+.varient-faq {
+    min-height: 8rem;
+    margin-bottom: 4rem;
+    padding-top: 5rem;
+    @include bp(md) {
+        padding-top: 3.5rem;
+    }
+    .accordion-faq{
+        border: 1px solid var(--grey-9);
+        border-radius: 1rem;
+        overflow: hidden;
+    }
+     
+    .card {
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        .card-body {
+            @include radius(0);
+            @include shadow(none);
+            margin: 1.5rem 5rem; 
+            .card-inner{
+                @include font(1.8rem, 400, var(--grey-1));
+            }
+        }
+        .card-header {
+            a { 
+                &.card-link {
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 2rem;
+                    align-items: center;
+                    i {
+                        &.icon-drrowdown,
+                        &.icon-arrowup {
+                            &:before {
+                                @include font(3.2rem, normal, var(--grey-1));
+                            }
+                        }
+                    }
+                }
+            }
+            &.main-title {
+                padding: 1.7rem 2rem 1.7rem 3rem;
+                @include radius(0rem);
+                @include shadow(none);
+                border: solid 0px var(--white);
+                background-color: var(--grey-15);
+                margin-bottom: 0rem;
+                @include font(2.4rem, 400, var(--grey-1));
+                position: relative;
+                z-index: 1;
+                &.last {
+                    margin-bottom: 0rem;
+                }
+                a {
+                    @include font(1.6rem, 600, var(--grey-1));
+                }
+                @include bp(sm) {
+                    padding: 2rem 2rem;
+                    a {
+                        @include font(1.8rem);
+                    }
+                }
+            } 
+        } 
+        @include bp(md) {
+            .card-body {
+                margin: 1rem 1rem; 
+                .card-inner{
+                    @include font(1.4rem, 400, var(--grey-1));
+                }
+            }
+        }
+    }
+}
+
+.card-link {
+    &[data-toggle="collapse"] {
+        .icon-arrowup {
+            width: auto;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-style: inherit;
+            border: 0px solid var(--grey-1);
+           // background: var(--white);
+            @include radius(0); 
+            &:before {
+                content: "\e92e";
+                @include font(3.2rem, normal, var(--grey-1));
+            }
+            @include bp(sm) {
+                width: auto;
+                height: auto;
+                @include radius(0); 
+            }
+        }
+    }
+    &[data-toggle="collapse"].collapsed {
+        .icon-arrowup:before {
+            content: "\e910";
+            @include font(1.6rem, normal, var(--grey-1));
+        }
+    }
+}
+span.highlight {
+    background: #f9c015;
+    display: inline !important;
+    padding: 0 !important;
+}
+
+.view-faq{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}

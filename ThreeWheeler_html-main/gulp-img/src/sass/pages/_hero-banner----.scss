@@ -1,0 +1,268 @@
+.hero-wrapper {
+    height: calc(100vh - 3vh);
+    @include bp(md) {
+        height: calc(100vh - 3vh);
+    }
+    .banner-slider, .banner-slider-home {
+        display: inline-block; 
+        max-width: 100%;
+        .slide-item {
+            height: calc(100vh - 0vh);
+            position: relative;
+            .full-img {
+                height: 100vh;
+                width: 100%;
+                object-fit: cover;
+                @include transition(300ms linear 0s);
+            }
+             
+        }
+        .slick-dots {
+            position: absolute;
+            margin-bottom: 4rem;
+            bottom: 4rem;
+        }
+        @include bp(sm) {
+             
+            .slick-dots {
+                margin-bottom: 3rem;
+                li {
+                    button {
+                        &:before {
+                            font-size: 3.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.enquery-banner{
+        height: 100%;
+        padding: 3rem 0rem 2rem;
+        .banner-slider {
+            display: inline-block; 
+            max-width: 100%;
+            .slide-item {
+                height: 50rem;
+                position: relative;
+                .slide__img{
+                    top: 19%;
+                }
+                .full-img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    @include transition(300ms linear 0s);
+                }                 
+            }  
+        }
+        @include bp(md) {
+            height: 100%;
+            padding: 0rem;
+            .banner-slider{
+                .slide-item {
+                    height: 100%; 
+                    .full-img {
+                        height: 100%; 
+                        object-fit: cover; 
+                    }
+                     
+                }
+            }
+        }
+    }
+    &.produxt-hero-wrapper{
+        height: 100vh;
+        .slide__img {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            @media (min-width: 992px) {
+                position: absolute;
+                top: 45%;
+                left: 0;
+                transform: translateY(-42%);
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+                opacity: 1 !important;
+                animation-duration: 3s;
+                transition: all 1s ease;
+            }
+        }
+    }
+}
+
+.slide__img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    @media (min-width: 992px) {
+        position: absolute;
+        top: 45%;
+        left: 0;
+        transform: translateY(-45%);
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+        opacity: 1 !important;
+        animation-duration: 3s;
+        transition: all 1s ease;
+    }
+} 
+ 
+.instructions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0;
+    margin: 0;
+    width:100%;
+    height:100vh;
+    overflow: hidden;
+.mobile-video{
+    display: none;
+}
+.web-video{
+    display: block;
+}
+video {
+  object-fit: cover;
+  width:100%;
+  height:100%;
+    &.video-js {
+        width: 100vw;
+        height: 100vh;
+    }
+}
+    @include bp(md) { 
+        .mobile-video{
+            display: block;
+        }
+        .web-video{
+            display: none;
+        }
+    }
+}
+
+.instructions{
+    position: relative; 
+    .play-button-wrapper, .play-button-wrapperM {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        pointer-events: none;
+        #circle-play-b {
+            cursor: pointer;
+            pointer-events: auto;
+    
+            svg {
+                width: 5rem;
+                height: 5rem;
+                fill: #fff;
+                stroke: #fff;
+                cursor: pointer;
+                background-color: rgba(black, 0.2);
+                border-radius: 50%;
+                opacity: 0.9;
+            }
+        }
+        #circle-play-M{
+            display: none;
+        }
+        @include bp(md){
+            #circle-play-b{
+                display: none;
+            }
+            #circle-play-M {
+                cursor: pointer;
+                pointer-events: auto;
+                display: block;
+                svg {
+                    width: 5rem;
+                    height: 5rem;
+                    fill: #fff;
+                    stroke: #fff;
+                    cursor: pointer;
+                    background-color: rgba(black, 0.2);
+                    border-radius: 50%;
+                    opacity: 0.9;
+                }
+            }
+        }
+    }
+}
+
+.instructions{
+    &.youtubeviedo{
+        background: #000;
+        iframe{
+            width:100%;
+            height:100%;
+            @include bp(md){
+                width:100%;
+                height:100%;
+            }
+        }
+    }
+}
+.video-control {
+	position: absolute;
+	left: 1em;
+	bottom: 1em;
+	min-width: 7.5em;
+	padding: 0.5em 1em;
+	text-align: left;
+	border-radius: 9in;
+	background: #FFFB;
+}
+
+.video-control:not(.playing) .video-control-pause,
+.video-control.playing .video-control-play {
+	display: none;
+}
+
+.videob-button, #jsvideob-button  {
+    border-radius: 60px;
+    border: 4px solid #fff;
+    height: 60px;
+    position: absolute;
+    width: 60px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    cursor: pointer;
+    display: block;
+    opacity: 0.95;
+    transition: opacity 150ms;
+    background: #000;
+    z-index: 10;
+}
+
+.videob-button:before, #jsvideob-button:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 20px;
+    border-color: transparent transparent transparent #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: -5px;
+    bottom: 0;
+    margin: auto;
+}

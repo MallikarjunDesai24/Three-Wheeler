@@ -1,0 +1,618 @@
+.enquiry-wrapper{
+    padding-top: 14rem;
+    padding-bottom: 3rem; 
+    @include bg-img(url('../images/feature-bg.png'), left top, 100%);
+    @include bp(md) {   
+        padding-top: 10rem;
+    }
+    &.otp-form{
+        padding: 10rem 0rem 4rem;
+        .know-more{
+            justify-content: center;
+            flex-direction: column;
+            padding: 8rem 0rem;
+            p{
+                @include font(1.4rem, 400, var(--grey-1));
+                margin: 0; 
+            }
+        }
+        @include bp(md) {
+            padding: 5rem 0 0rem;
+            .know-more{
+                padding: 4rem 0rem;
+            }
+        }
+    }
+}
+.one-vehicle{
+    .enquiry-img{
+        padding: 7rem 0rem;
+        display: flex;
+        max-width: 45rem;
+        img{
+            max-width: 100%;
+        }
+        @include bp(md) {
+            display: none;
+        }
+    }
+}
+.one-vehicle-form{
+    padding: 0rem;
+    @include bp(md) {
+        padding: 5rem 0rem 0rem;
+        .form-group{
+            &.w-50{
+                width: 100%!important;
+                margin-bottom: 2.5rem!important;
+            }
+        }
+    } 
+}
+.counter{
+    &.countr-enquiry{
+        flex-wrap: wrap;
+        padding: 0rem 0rem 1rem; 
+        li{
+            min-width: 150px;
+            flex-wrap: wrap;
+            padding: 2rem 0;
+            flex: none;
+        }
+        @include bp(md) {
+           padding:0rem;
+           position: relative;
+           &:before{
+                content: "";
+                background-image: linear-gradient(to bottom, var(--white), var(--grey-11) 48%, var(--white));
+                height: 100%;
+                width: 0.1rem;
+                min-height: 25rem;
+                left: 0;
+                right: 0;
+                margin: auto;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+            }
+            &:after{
+                content: "";
+                background-image: linear-gradient(to left, var(--white), var(--grey-11) 48%, var(--white));
+                position: absolute;
+                height: 0.1rem;
+                width: 100%;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+            }
+           li{
+            padding: 2rem 1.5rem;
+            &:nth-child(1){ 
+                text-align: right;
+            }
+            &:nth-child(2){ 
+                text-align: left;
+            }
+            &:nth-child(3){ 
+                text-align: right;
+            }
+            &:nth-child(4){
+                text-align: left;
+            }
+           }
+        }
+    }
+}
+.mobile-no{
+    position: relative;
+    .country-field{
+        position: absolute;
+        z-index: 1;
+        background: rgba(193, 193, 193, 0.3);;
+        padding: 1.4rem;
+        @include radius(0.5rem);
+        @include font(1.6rem, 600, var(--grey-1));
+        top: 2px;
+        left: 3px;
+        @include bp(md) {
+            @include radius(0.5rem 0.5rem 0 0rem);
+            top: 0px;
+            left: 1px;
+            padding: 1.5rem 1.2rem;
+        }
+    }
+    .p-left{
+        padding-left: 7rem;
+    }    
+}
+.vehicle-type{
+    h2{
+        @include font(1.8rem, 500, var(--grey-1));
+        padding-bottom: 1rem;
+    }
+    .vehicle-slots{
+        min-width: 18rem;
+        margin-right: 2rem;
+        position: relative;
+    }
+    @include bp(md) {
+        .vehicle-slots{
+            min-width: 15rem;
+            margin-right: 1.5rem;
+        }
+    }
+}
+.whatup-check{
+    padding: 0rem 2.5rem 1rem 0rem;
+    width: 60%;
+    &+.whatup-check{
+        width: auto;
+        position: relative;
+    }
+    p{
+        padding-left: 5.25rem;
+        margin: -0.7rem 0rem;
+        position: absolute;
+        @include bp(md) {
+            padding-left: 3.25rem; 
+        }
+    }
+}
+.know-more{
+    &.submit{
+        justify-content: flex-end;
+        padding: 1rem 0;
+        .btn{
+            width: 15rem;
+        }
+        @include bp(md) {
+            justify-content: center;
+            padding: 2rem 0rem 0rem
+        }
+    }
+}
+
+.benifits-tvs{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    @include bg-img(url('../images/benifits-tvs.jpg'),
+    left top,
+    cover);
+    margin: 5rem 0 0;
+    .thumbnail-card{
+        .card{
+            max-width: 50rem;
+            min-height: 33em;
+            max-height: 33rem;
+            overflow: hidden;
+            border: none;
+            padding: 3rem;
+            @include radius(1rem);
+            .card-title{
+                @include font(2.2rem, 600, var(--grey-1));
+                margin-bottom: 1.7rem;
+            }
+            .card-body{
+                padding: 0rem;
+                ul{
+                    li{
+                        @include font(1.6rem, 600, var(--grey-1));
+                        padding: 0.5rem 0rem;
+                    }
+                }
+                .card-text{
+                    line-height: normal;
+                    text-align: justify;
+                }
+            }
+            .card-icon {
+                padding-bottom: 1.3rem;
+                i{
+                    @include font(4rem, 400, var(--grey-1));
+                }
+            }
+        }
+    }
+    @include bp(md) {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        // .row{
+        //     .col-md-4{
+        //         // padding-left: 0;
+        //         // padding-right: 0;
+        //     }
+        // }
+        @include bg-img(url('../images/benifits-tvs-mobile.png'), left top, cover);
+        .thumbnail-card{
+            .card{
+                padding: 2rem 1.5rem;
+                margin-bottom: 2rem;
+                @include radius(1rem);
+                width: 100%;
+                max-width: 100%;
+                min-height: 100%;
+                max-height: 100%;
+                .card-title{
+                    @include font(2rem); 
+                } 
+                .card-icon { 
+                    i{
+                        @include font(3.2rem);
+                    }
+                }
+            }
+        }
+    }
+}
+.valuable-partners{
+    padding: 4rem 0rem 5rem;
+    .partners{
+        padding: 5rem 0rem 1rem;
+    }
+    .know-more{
+        justify-content: center;
+        flex-direction: column;
+        p{
+            @include font(1.4rem, 400, var(--grey-1));
+            margin: 0; 
+        }
+    }
+    .finance-slider {
+        .slick-dots{
+            bottom: -4rem;
+        }
+    }
+    @include bp(md) {
+        padding: 5rem 0rem;
+    }
+}
+
+/*OTP Section*/
+.one-vehicle{
+    .otp-img{
+        padding: 0rem 0rem 4rem;
+    }
+    .mobile-number{
+        padding: 1rem 0rem 1.6rem;
+        p{
+            @include font(2.2rem, 400, var(--blue));
+        }
+    }
+}
+.edit-number{
+    a{
+        @include font(1.6rem, 600, var(--blue-01));
+        i{
+            @include font(1.6rem, 600, var(--blue-01));
+            padding-right: 0.5rem;
+        }
+    }
+} 
+.resend-otp{
+    p{
+        @include font(1.6rem, 400, var(--grey-3));
+        padding: 1rem 0rem;
+        margin: 0;
+        a{
+            @include font(1.6rem, 600, var(--blue-01));
+        }
+    }
+}
+
+/* Thank you*/
+.thank-you{
+    text-align: center;
+    .icon-thank{
+        padding: 1rem 0rem 2rem;
+        i{
+            @include font(8rem, 600, var(--green));
+            &.icon-error{
+                color:var(--red);
+            }
+        }
+    }
+    p{
+        @include font(2.2rem, 400, var(--blue));
+        padding: 0rem;
+        margin: 0rem;
+    }
+    
+}
+.tc-wp{
+   display: flex;
+   justify-content: space-between;
+   padding-top: 2.5rem;
+   align-items: center;
+   @include bp(md) {
+    flex-direction: column;
+    padding-top: 1.5rem;
+    .whatup-check{
+        padding: 0rem;
+        width: 100%;
+        &+.whatup-check{
+            padding: 0rem;
+        }
+    }
+   }
+}
+
+.tc-pp{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .terms-privecy{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 65%;
+        a{
+            @include font(1.8rem, 700, var(--blue-01));
+            &:focus,&:hover{
+                @include font(1.8rem, 700, var(--blue-01));
+                text-decoration: underline;
+            }
+        }
+    }
+    @include bp(md) {
+        flex-direction: column;
+        .terms-privecy{
+            flex-direction: row;
+            width: 100%;
+            padding: 2rem 0;
+            justify-content: space-around;
+            a{
+                margin: 1rem 0rem 0rem;
+                @include font(1.6rem, 700, var(--blue-01));
+            }
+        }
+    }
+}
+.enquiry-card-list{
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    ul{
+        list-style: none;
+        padding: 0 1rem;
+        li{
+            img{
+                max-width: 100%;
+                width: 4rem;
+                margin-right: 1rem;
+            }
+        }
+    }
+    .img-enquiry{
+        img{
+            max-width: 100%;
+            width: 7rem;
+        }
+    }
+}
+
+.dealership-ul{
+    padding: 3rem 0rem 0rem;
+    h2{
+        @include font(2.4rem, 600, var(--grey-1));
+        padding-bottom: 3rem;
+    }
+    ul{
+        padding: 0rem 4rem;
+        margin: 0;
+        li{
+            @include font(1.8rem, 600, var(--grey-1));
+            line-height: normal;
+            padding: .5rem 0rem;
+        }      
+    }
+}
+
+/* Multiselected Dealerslship form */
+.dealership-multi{
+
+
+.multiselect-native-select {
+    position: relative;
+    select {
+        border: 0 !important;
+        clip: rect(0 0 0 0) !important;
+        height: 1px !important;
+        margin: -1px -1px -1px -3px !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+        position: absolute !important;
+        width: 1px !important;
+        left: 50%;
+        top: 30px;
+    }
+}
+.multiselect-container {
+    position: absolute;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    .input-group {
+        margin: 5px;
+    }
+    li {
+        padding: 0;
+        width: 100%;
+        @include font(1.6rem, 500, var(--blue));
+        .multiselect-all {
+            label {
+                @include font(1.6rem, 500, var(--blue));
+            }
+        }
+        a {
+            padding: 0;
+            @include font(1.6rem, 500, var(--blue));
+            label {
+                margin: 0;
+                height: 100%;
+                cursor: pointer;
+                font-weight: 400;
+                padding: 3px 20px 3px 20px;
+                @include font(1.6rem, 500, var(--blue));
+                input[type=checkbox] {
+                    margin-bottom: 5px;
+                }
+            }
+            label.radio {
+                margin: 0;
+            }
+            label.checkbox {
+                margin: 0;
+            }
+        }
+    }
+    li.multiselect-group {
+        label {
+            margin: 0;
+            padding: .5rem 2rem .5rem 2rem;
+            height: 100%;
+            font-weight: 500;
+        }
+    }
+    li.multiselect-group-clickable {
+        label {
+            cursor: pointer;
+        }
+    }
+}
+.btn-group {
+    width: 100%;
+		.btn-group {
+				.multiselect.btn {
+					border-top-left-radius: 4px;
+					border-bottom-left-radius: 4px;
+				}
+		}
+	}
+    .form-inline {
+        .multiselect-container {
+            label.checkbox {
+                padding: 3px 20px 3px 40px;
+            }
+            label.radio {
+                padding: 3px 20px 3px 40px;
+            }
+            li {
+                a {
+                    label.checkbox {
+                        input[type=checkbox] {
+                            margin-left: -20px;
+                            margin-right: 0;
+                        }
+                    }
+                    label.radio {
+                        input[type=radio] {
+                            margin-left: -20px;
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .btn {
+        text-align: left;
+        border: 1px solid var(--grey-11);
+        padding: 0rem 6rem 0 2rem;
+        height: 5.2rem;
+        @include font(1.6rem, 500, var(--blue));  
+        @include radius(.5rem);
+        width: 100%;
+        &:hover, &:focus{
+            color: var(--grey-3);
+        }
+        &.dropdown-toggle{
+            &::after{
+                display: none;
+                    content: '';
+            } 
+        }
+    }
+    .btn-primary {
+        background-color: #ff0000;
+        border: none;
+        border-radius: 0;
+        padding: 11px 15px;
+        text-transform: uppercase;
+    }
+
+}
+.toll-free {
+    p {
+        @include font(1.6rem, 500, var(--grey-1));
+        margin: 0;
+
+        a {
+            color: var(--blue-01);
+            font-weight: 600;
+
+            &:hover {
+                color: var(--blue-01);
+                font-weight: 600;
+            }
+        }
+    }
+}
+.pin-subtext{
+    @include font(1.3rem, 500, var(--grey-10));
+    display: block;
+    padding: 10px 0px 0px;
+}
+.nearest-dealer{ 
+    h3{
+        @include font(1.8rem, 600, var(--grey-10));
+        margin-bottom: .4rem;
+    }
+    h4 {
+        @include font(1.6rem, 700, var(--grey-10));
+        margin-bottom: .5rem;
+    }
+    p {
+        @include font(1.4rem, 500, var(--grey-10));
+        margin-bottom: 1rem;
+        line-height: 2rem;
+    }
+    .rating-section {
+        .rating-number {
+            display: flex;
+            align-items: center;
+        }
+        span{
+            @include font(1.4rem, 700, var(--grey-10));
+            margin-right: .6rem;
+        }
+    }
+    .nearest-closest-location-text{
+    padding-bottom: 1.2rem;
+        span{
+            @include font(1.3rem, 500, var(--grey-10)); 
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.location-group{
+    position: relative;
+    .form-control{
+        padding-left: 5rem;
+    }
+    .location{
+        position: absolute;
+        top: 0;
+        align-items: center;
+        display: flex;
+        margin: 0 auto;
+        text-align: center;
+        justify-content: center;
+        width: 5.2rem;
+        height: 5.2rem;
+        .icon-dealerdetect{
+            @include font(2.4rem, 500, var(--grey-10)); 
+        }
+    }
+}

@@ -1,0 +1,175 @@
+.looking-finance{ 
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    @include bg-img(url('../images/looking-finance.png'),
+    center center,
+    cover);
+    .know-more{
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 1.5rem;
+        padding: 4rem 0rem;
+        p{
+            @include font(1.4rem, 400, var(--grey-1));
+            margin: 0; 
+        }
+    }
+    .row{
+        &.looking-mobile{
+            align-items: center;
+            padding-bottom: 4rem;
+        }
+    }
+    @include bp(md) {    
+        background-position: left top;
+        background-size: 200% 100%;
+        padding-top: 6rem;
+        padding-bottom: 2rem;
+        .row{
+            &.looking-mobile{
+                flex-direction: column-reverse;
+                padding-bottom: 6rem;
+            } 
+        }
+    }
+}
+.finance-slider{
+    .slick-dots {
+        position: absolute;
+        margin-bottom: 0rem;
+        bottom: -5rem;
+        margin-left: .6rem;
+        li{
+            &.slick-active {
+                button{
+                    &:before{
+                        background-color:var(--grey-1);
+                    }
+                }
+            }
+        }
+    }
+    @include bp(md) {   
+        .slick-dots {
+            margin-left: 0rem;
+        }
+    }
+}
+.finance-list{
+    padding: 1rem 0 0rem;
+    margin-left: -0.5rem;
+    p{
+        @include font(1.6rem, 400, var(--grey-1));
+        margin: 0;
+    }
+    .offers{
+        @include font(1.6rem, 600, var(--grey-1));
+        padding: 3rem 0rem 0rem;
+    }
+    span{
+        @include font(1.8rem, 400, var(--grey-1));
+    }
+    ul{
+        padding: 4rem 0 0 0;
+        list-style: none;
+        margin: 0rem;
+        li{
+            @include font(1.8rem, 500, var(--grey-1));
+            display: flex;
+            align-items: center;
+            padding: 1rem 0rem;
+            i{
+                background: var(--blue);
+                height: 3.5rem;
+                width: 3.5rem;
+                display: flex;
+                align-items: center;
+                font-style: normal;
+                justify-content: center;
+                @include font(1.6rem, 600, var(--white));
+                @include radius(3rem);
+                margin: 0 1rem 0 0;
+                min-width: 3.5rem;
+            }
+        }
+    }
+    @include bp(md) {   
+        padding: 0rem;
+        margin-left: 0rem;
+        p{
+            @include font(1.6rem, 400, var(--grey-1));
+            margin: 0;
+        }
+        .offers{
+            @include font(1.6rem, 600, var(--grey-1));
+            padding: 3rem 0rem 4rem;
+        } 
+        ul{
+            padding:3rem 0 0 0rem;
+            li{
+                @include font(1.6rem, 500, var(--grey-1));
+                i{
+                    height: 3rem;
+                    width: 3rem;
+                    min-width: 3rem;
+                }
+            }
+        }
+    }
+}
+.slide-card{
+    border-radius: 8px;
+    border: solid 1px var(--grey-14);
+    background-color: var(--white); 
+    margin: 0 1rem;
+    img{
+        max-width: 20rem;
+        margin: 0 auto;
+        padding: .7rem;
+    }
+}
+
+.arrow-down {
+    width: 2.5rem; 
+    animation: bounce 1600ms infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    cursor: pointer;
+    height: 2rem;
+    padding: 1.2rem 0 0rem;
+  }
+  
+  .icon-arrow-down { 
+    transform-origin: 0% 0%;
+    @include font(2.2rem, 600, var(--blue));
+  } 
+  @keyframes bounce {
+  50% {
+      transform: translateY(-15px);
+    }
+  }
+
+  .video-wrapper {
+    width:36rem;
+    // height:63rem;
+    // overflow: hidden;
+    
+    video {
+      object-fit: cover;
+      width:100%;
+      height:100%; 
+      &:focus-visible{
+        outline: none;
+        border: 0;
+        outline-color: transparent;
+      }
+    }
+    @include bp(md) {
+        // max-width:47.6rem;
+        // max-height:63rem;
+        // width: auto;
+        // height: auto;
+        max-width: 36rem;
+        width: auto;
+        height: auto;
+        margin-top: -70%;
+    }
+}

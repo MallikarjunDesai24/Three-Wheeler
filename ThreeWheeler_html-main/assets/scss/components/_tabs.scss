@@ -1,0 +1,183 @@
+.tabs-sm {
+    button {
+        border: none;
+        background: none;
+        &.slick-prev, &.slick-next {
+            top: 45%;
+            // &.slick-arrow{
+            //     border: 2px solid var(--blue);  
+            //     background: var(--white);
+            // }
+        }
+        &.slick-prev {
+            left: -6rem; 
+        }
+        
+        &.slick-next {
+            right: -5rem; 
+        }
+    } 
+    .nav-item {
+        &+.nav-item {
+            margin-left: 3rem;
+        }
+    }
+    .nav-pills {
+        .nav-link {
+            @include font(2rem, 700, var(--grey-1)); 
+            padding: 0.5rem 1.5rem;
+            position: relative;
+            padding-bottom: 1.5rem;
+            &:before {
+                content: "";
+                min-width: 100%;
+                height: .3rem;
+                background: var(--blue-01);
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                @include transform(translateX(-50%) scaleX(0));
+                @include transition(200ms linear 0s)
+            }
+            &.active {
+                background: none;
+                color: var(--grey-1);
+                &:before {
+                    @include transform(translateX(-50%) scaleX(1))
+                }
+            }
+        }
+    }
+    .iceev-video-slider, .testimonials-slider{
+        button {
+            border: none;
+            background: none; 
+            &.slick-prev {
+            left: -5rem; 
+            }
+            
+            &.slick-next {
+                right: -4rem; 
+            }
+        } 
+    }
+    .tab-content-section {
+        padding: 0 1rem 4.5rem 1rem;
+    }
+    &.our-product-image-tabs{
+        &>.container{
+            &>.col-md-12{
+                width: 96rem;
+                max-width: 96rem;
+            }
+        }
+        .nav-pills {
+            align-items: center;
+            overflow-x: scroll;
+            display: flex;
+            flex-wrap: nowrap;
+            width: 100%;
+            justify-content: start;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            margin: 0 -3rem 0 -3rem;
+            -ms-overflow-style: none;  /* IE and Edge */
+             scrollbar-width: none;  /* Firefox */
+            &::-webkit-scrollbar {
+                display: none;
+              }
+            .nav-link {
+                @include font(2rem, 600, var(--grey-1)); 
+                padding:1.1rem 3.8rem;
+                position: relative; 
+                background-image: linear-gradient(to left, var(--off-white) 8%, var(--grey-9) 96%);
+                @include radius(1rem);
+                // transition: color 0.5s ease;
+                @include transition(200ms linear 0s);
+                &:before {
+                    content: "";
+                    min-width: 100%;
+                    height: 0rem;
+                    background: var(--blue);
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    // @include transform(translateX(-50%) scaleX(0));
+                    @include transition(200ms linear 0s)
+                }
+                &:hover{
+                    background-image: linear-gradient(to left, #DDE8FE 8%, #9BC1FF 96%);
+                    @include transition(200ms linear 2s);
+                    
+                }
+                &.active { 
+                    color: var(--blue);
+                    background-image: linear-gradient(to left, #DDE8FE 8%, #9BC1FF 96%);
+                    @include radius(1rem);
+                    &:before {
+                        @include transform(translateX(-50%) scaleX(1))
+                    }
+                }
+            }
+        }
+        .nav-item {
+            min-width: max-content;
+            &+.nav-item {
+                margin-left: 1.5rem;
+            }
+        }
+        @include bp(md) {
+            .nav-pills {
+                justify-content: start;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem; 
+                margin: 0 -3rem 0 -3rem;
+                .nav-link {
+                    @include font(1.8rem, 600, var(--grey-1)); 
+                    padding:1rem 2.5rem;
+                    @include radius(.8rem);
+                    &.active { 
+                        @include radius(0.8rem);
+                        &:before {
+                            @include transform(translateX(-50%) scaleX(1))
+                        }
+                    }
+                }
+            }
+        }
+        @include bp(lg) {
+            .nav-pills {
+                .nav-link {
+                    padding:1.1rem 1.8rem;
+                }
+            }
+        }
+    } 
+    @include bp(md) {
+        padding-bottom: 5rem;
+        .nav-pills {
+            padding-left: 0rem;
+            padding-right: 0rem;
+            max-width: max-content;
+            margin: 0 auto;
+            overflow: auto;
+            flex-wrap: nowrap;
+            .nav-link {
+                @include font(1.8rem);
+                width: max-content;
+                padding-bottom: 1.5rem;
+                &:before {
+                    height: .2rem;
+                    bottom: 4px;
+                }
+            }
+        }
+        .nav-item {
+            &+.nav-item {
+                margin-left: 3rem;
+            }
+        }
+    } 
+}
+
+ 

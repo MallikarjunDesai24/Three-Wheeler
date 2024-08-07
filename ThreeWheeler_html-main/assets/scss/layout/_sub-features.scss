@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css?family=Sriracha&display=swap');
+.sub-features-wrapper {
+    // @include gradient(#fafafa,
+    // #f4f4f4,
+    // vertical);
+    background-color: var(--white);
+    padding-top: 6rem;
+    padding-bottom: 15rem;
+    .btn {
+        &.primary-gradient-btn {
+            background: var(--grey-33);
+            border: 0px;
+            @include radius(3rem);
+            @include shadow(none);
+            @include font(1.8rem,
+            500,
+            var(--white));
+            font-family: 'gothammedium';
+            padding: 1.2rem 1.5rem;
+        }
+    }
+    @include bp($lg-md-min) {
+        padding-top: 12rem;
+    }
+    .curve {
+        top: -15px;
+        border: none;
+        &.top {
+            content: url('../images/faq-top.svg');
+            width: 100%;
+            z-index: 1;
+            // border-top:2px solid var(--connect-blue);
+        }
+        @include bp(sm) {
+            top: -5px;
+        }
+    }
+    .text-content {
+        h4 {
+            @include font(4rem,
+            400,
+            var(--grey-33));
+            font-family: 'primeregular';
+            margin-bottom: 2rem;
+        }
+        h3 {
+            @include font(4rem,
+            400,
+            var(--grey-33));
+            font-family: 'primeregular';
+            margin-bottom: 3rem;
+        }
+        i {
+            display: block;
+            margin: 0 auto;
+            font-size: 6rem;
+            color: #81d59e;
+            // @include gradient-text(var(--brand-color),
+            // var(--brand-color));
+            margin-bottom: 1rem;
+        }
+        &.orange-font {
+            margin-top: 5rem;
+            border-top: 1px solid var(--font-very-light-grey);
+            padding-top: 6rem;
+            i {
+                // @include gradient-text( var(--brand-color-pink),
+                // var(--brand-color-pink));
+                margin-bottom: .5rem;
+                color: #f39d92;
+            }
+        }
+    }
+    .notes-wrapper {
+        max-width: 120rem;
+        margin: 0 auto; 
+        .row {
+            margin-left: -2.5rem;
+            margin-right: -2.5rem;
+            [class*=col-] {
+                padding-left: 2.5rem;
+                padding-right: 2.5rem;
+            }
+        }
+        .slider { 
+            @include bp(md) {
+                .slick-prev,
+                .slick-next { 
+                    border-radius: 50%;
+                    border: 2px solid var(--grey-33);
+                    width: 2.8rem;
+                    height: 2.8rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    &:before {
+                        font-family: "icomoon";
+                        @include font(1.4rem, 600, var(--grey-33));
+                        opacity: 100;
+                    }
+                    &.slick-disabled {
+                        opacity: .25;
+                        &:before {
+                            
+                        }
+                    }
+                }
+                
+                .slick-prev {
+                    top: auto;
+                    bottom: -2rem;
+                    left: 38%;
+                }
+                .slick-next {
+                    top: auto;
+                    bottom: -2rem;
+                    right: 38%;
+                }
+            }
+        }
+    }
+    &+.footer {
+        margin-top: -10rem;
+        position: relative;
+        z-index: 10;
+    }
+    .yow-onow{
+        max-width: 37rem;
+        display: flex;
+        @include bp(md) {
+            max-width: 30rem;
+            margin: 0 auto;
+        }
+    }
+    .pinned-note {
+        padding: 9rem 2rem 2.1rem 4rem;
+        height: 100%;
+        position: relative;
+        @include radius(0rem);;
+       
+        &.note-1 {
+            background: url('../images/green-card.png');
+            background-repeat: no-repeat; 
+            background-size: 100%;
+            height: 25.4rem; 
+          }
+        &.note-2 {
+            background: url('../images/yellow-card.png');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            height: 25.4rem;
+        }
+        &.note-3 {
+            background: url('../images/blue-card.png');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            height: 25.4rem;
+        }
+        .nodes {
+        }
+        .pinned-description {
+            @include font(1.8rem,
+            400,
+            var(--grey-33));
+            opacity: 1; 
+            margin: 1rem 0;
+            position: relative; 
+            font-style: italic;
+            font-family: 'Roboto';
+        }
+    }
+    @include bp(lg) {
+        .notes-wrapper {
+            max-width: 960px;
+        }
+    }
+    @include bp(md) {
+        padding-top: 7rem;
+        .notes-wrapper {
+            max-width: 100%;
+            .row {
+                margin-left: 1.5rem;
+                margin-right: 1.5rem;
+                [class*=col-] {
+                    padding-left: 1.5rem;
+                    padding-right: 1.5rem;
+                }
+            }
+        }
+        .pinned-note {
+            margin: 0 auto;
+            min-height: 23.6rem;
+            padding: 7rem 2rem 0rem 2rem;
+            .pinned-description {
+                @include font(1.6rem); 
+                margin: 0;
+            }
+        }
+        &+.footer {
+            margin-top: -3rem;
+        }
+        .text-content {
+            i {
+                font-size: 5rem;
+            }
+            h4 {
+                @include font(2.4rem);
+                margin-bottom: 1.6rem;
+            }
+            h3 {
+                @include font(2.4rem);
+                margin-bottom: 2.4rem;
+            }
+            &.orange-font {
+                margin-top: 3rem;
+                padding-top: 3rem;
+            }
+        }
+        .btn {
+            &.primary-gradient-btn {
+                @include font(1.8rem,
+                500,
+                var(--white));
+                font-family: 'gothammedium';
+                padding: 1rem 1.3rem;
+            }
+        }
+    }
+    @include bp(sm) {
+        padding-top: 5rem;
+        padding-bottom: 8rem; 
+        .text-content {
+            h3 {
+                @include font(2.4rem);
+            }
+            &.orange-font {
+                margin-top: 4rem;
+            }
+        }
+        .notes-wrapper {
+            // width: 720px;
+            .row {
+                [class*=col-] {
+                    &+[class*=col-] {
+                        margin-top: 3rem;
+                    }
+                }
+            }
+        }
+    }
+}

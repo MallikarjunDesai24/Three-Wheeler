@@ -1,0 +1,142 @@
+.download{
+    padding-top:5rem;
+    padding-bottom: 4rem;  
+    @include bp(md) {
+        padding-top:9rem;
+        padding-bottom: 1rem; 
+    }
+    
+}
+.download-brochure{
+    background: linear-gradient(to right, var(--blue), var(--blue-01));
+    max-height:max-content;
+    margin: 10rem 0 0 0rem;
+    .brochure{
+        background: var(--white); 
+        margin: -5rem auto 0rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        box-shadow: 3px 3px 44px 0 rgb(0 0 0 / 16%);
+        @include radius(1rem);
+        .select-box{
+            min-width: 35rem;
+            position: relative;
+            // padding: 5rem 0;
+            &:before{
+              right: .7rem;
+              height: 4rem;
+              width: 5.5rem;
+              align-items: center;
+              justify-content: center;
+              display: flex;
+              background: linear-gradient(to right, var(--blue), var(--blue-01));
+              @include radius(.8rem);
+            }
+          }
+    }
+    @include bp(md) {
+        height: auto;
+        .brochure{
+            flex-direction: column;
+            padding: 1rem 0 3.5rem;
+            .select-box{
+                min-width: 30rem; 
+                padding: 0.5rem 0;
+                &:before{
+                    padding:0rem;
+                }
+            }
+        }
+    }
+}
+.maintenance{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 6rem 4rem;
+    flex-direction: column;
+    .maintenance-rounded{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        &+.maintenance-rounded{
+            padding: 3rem 7rem 0;
+        }
+        a{
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+        }
+        @include bp(md) {
+            flex-direction: column;
+            &+.maintenance-rounded{
+                padding: 1rem 0;
+                border-top: 1px solid #ddd;
+                margin-top: 1rem;
+            }
+            a{
+                flex-direction: column;
+            }
+        }
+    }
+
+    .schedule-warranty{ 
+        display: flex;
+        align-items: center;
+        justify-content: start; 
+        border-bottom: 1px solid var(--white);
+        span{
+            @include font(2.2rem, 400, var(--white));
+            padding-right: 0rem;
+        } 
+        
+    }
+    .divider{ 
+        background: #ddd;
+        height: 3rem;
+        left: 0;
+        right: 0;
+        margin: 0 3rem;
+        width: 0.1rem;
+    }
+    @include bp(md) {
+        flex-direction: column;
+        padding: 2rem 0rem;
+        .schedule-warranty{
+            justify-content: space-between;
+            width: 100%;
+            border-bottom: 0;
+            .btn{
+                &.lg-btn{
+                    min-width: 14rem;
+                }
+            }
+            span{
+                @include font(1.6rem, 500, var(--white));
+                padding-right: 1rem;
+            }
+        }
+        .divider{
+            height: 1px;
+            width: 100%;
+            margin: 1rem 0;
+        }
+    }
+    @include bp(lg) {
+        .schedule-warranty{
+            span{
+                @include font(1.8rem, 400, var(--white));
+            }
+        }
+    }
+}
+
+.brochure-btn{
+    padding-top:3rem;
+    @include bp(md) {
+        padding-top: 0;
+    }
+}

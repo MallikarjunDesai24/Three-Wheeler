@@ -1,0 +1,203 @@
+.review-wrapper { 
+    .review-bg-wrap { 
+        padding-top: 6rem;
+        padding-bottom: 4rem;
+        .thumbnail-card {
+            padding: 1rem 1rem 0.5rem;
+        }
+        &.review-landing{ 
+            margin: 1rem 0 -4rem;
+            
+            .see-all{ 
+                .btn {
+                    &.primary-gradient-btn {
+                        &.btn-primary-reverse {
+                            @include radius(3rem);
+                        }
+                    }
+                }
+                @include bp(sm) {
+                    margin-top: 3rem;
+                }
+            }
+            .review-title {
+                margin-bottom: 4rem;
+            }
+            .tabs-sm{
+                &.feature-p{
+                    padding: 4rem 0 0rem;
+                }
+            } 
+        }
+        @include bp(md) {
+            &.review-landing{ 
+                  background-position: center center;
+                  background-size: 100% 48%;
+                  .tabs-sm{
+                    &.feature-p{
+                        padding: 4rem 0 2rem;
+                    }
+                } 
+            }
+            .thumbnail-card {
+                padding: 1rem 1rem 0rem;
+            }
+        }
+    }
+   .driver-bg{
+        background:  url('../images/feature-bg.png');
+        background-position: left top;
+        background-size: cover;
+        padding: 3rem 0 0rem;
+        @include bp(md) {
+            padding: 2rem 0 5rem;
+        }
+    }
+ 
+    @include bp(sm) {
+        .review-bg-wrap {
+            padding-top: 5rem;
+            padding-bottom: 0rem; 
+            &.review-landing{
+                .review-title {
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+        h2 {
+            @include font(2.4rem);
+        }
+        .tabs-section {
+            margin-left: -1.5rem;
+            margin-right: -1.5rem;
+            .tab-content-section {
+                padding: 0 3rem 2.5rem 3rem;
+            }
+        }
+        .nav {
+            margin-bottom: 2rem;
+        }
+        .btn {
+            &.primary-gradient-btn {
+                &.btn-primary-reverse {
+                    padding: 1rem 3rem;
+                    @include font(1.8rem, 500, var(--white));
+                }
+            }
+        }
+    }
+}
+
+.defer-video {
+    width: 100%;
+    min-height: 24rem;
+    position: relative;
+    >img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        cursor: pointer !important;
+    }
+    button {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 6.8rem;
+        height: 4.8rem;
+        margin-left: -3.4rem;
+        margin-top: -2.4rem;
+        background: transparent;
+        border: none;
+        img {
+            cursor: pointer !important;
+        }
+    }
+}
+   
+
+// For multiple slider within tab
+.tab-content>.tab-pane:not(.active) {
+    height: 0 !important;
+    overflow: hidden;
+    display: block;
+}
+
+.inner-wrapper {
+    +.inner-wrapper {
+        padding-top: 3.5rem;
+        border-top: 1px solid var(--grey-3);
+        @include bp (sm) {
+            padding-top: 2.5rem;
+        }
+    }
+}
+
+.w980 {
+    width: 101rem;
+    @include bp(md) {
+        width: 100%;
+    }
+}
+ 
+
+@include bp(md-min) {
+    .no-slider {
+        .slick-track {
+            width: 100% !important;
+        }
+    }
+}
+
+/*Landing Review Tab*/
+.review-landing { 
+    .nav {
+        margin-bottom: 0rem;
+        li{
+            position: relative;
+            margin: 0 1rem;
+        }
+    }
+     
+    @include bp(md) {
+        .nav-link {
+            @include font(1.8rem, 700, var(--grey-1));
+            padding: 0.6rem 1.5rem 1.6rem;
+            &.active {
+                @include font(1.8rem, 700, var(--grey-1));
+                padding: 0.6rem 1.5rem 1.6rem;
+            }
+        }
+        .nav {
+            margin-bottom: 0rem;
+            li{
+                margin: 0 0.5rem;
+            }
+        }
+    }
+    @include bp(sm) {
+        .tabs-sm {
+            .iceev-video-slider ,.testimonials-slider{
+                &.slider {
+                    .slick-prev {
+                        top: auto;
+                        bottom: -7rem;
+                        left: 38%;
+                        display: none;
+                    }
+                    .slick-next {
+                        top: auto;
+                        bottom: -7rem;
+                        right: 38%;
+                        display: none;
+                    }
+                }
+            }
+        }
+        .nav-item:first-child {
+            .nav-link {
+                padding-left: 2rem;
+            }
+        }
+    }
+}

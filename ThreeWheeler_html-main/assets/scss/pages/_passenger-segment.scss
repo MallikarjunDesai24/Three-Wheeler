@@ -1,0 +1,148 @@
+.you-may{
+    padding-top:1rem;
+    padding-bottom: 4rem;
+    h4{
+        @include font(2.4rem, 500, var(--grey-1));
+        padding: 2rem 0 0 1rem;
+    }
+    @include bp(md) {
+        padding-bottom: 3rem;
+        padding-top:3rem;
+        h4{
+            @include font(2rem, 500, var(--grey-1));
+            padding-left: 0;
+        }
+    }
+}
+.passenger-segment{
+    // background-image: linear-gradient(to top, var(--white), var(--grey-7));
+    margin: 2rem 0 0rem;
+    .passenger-slider-content{
+        max-width: 96rem;
+        margin: 0 auto;
+        .passenger-card {
+            // display: flex;
+            justify-content: center;
+        
+            .card {
+                width: 32rem;
+                // min-height: 34em;
+                // max-height: 34rem;
+                overflow: hidden;
+                border: none;
+                background: transparent;
+                padding: 3rem 0rem;
+                margin: 0 auto;
+            }
+            .card-img-logo{
+                max-width: 18.5rem;
+                margin: 0 auto 1rem;
+                min-height: 7rem;
+                img {
+                    max-width: 100%;
+                }
+            }
+            .card-body {
+                padding: 1.8rem 0rem 1rem;
+            }
+        
+            .card-img {
+                // height: 22rem;
+                cursor: pointer;
+                @include radius(1rem);
+                overflow: hidden;
+                background:transparent;
+                width: 24rem;
+                margin: 0 auto;
+                img {
+                    cursor: default;
+                    max-width: 100%;
+                    height: auto;
+                } 
+            }
+            .card-footer{
+                background-color: transparent;
+                margin: 0 auto;
+                border: 0;
+                padding: 3rem 0 0;
+            }
+            .card-title {
+                @include font(2rem,
+                    600,
+                    var(--blue));
+                margin-bottom: 1.5rem;
+        
+                .btn {
+                    padding: 0.5rem 0rem;
+                    min-width: auto;
+                    background-color: transparent;
+                    color: var(--blue);
+                    height: auto;
+                    @include shadow(none);
+                }
+            }
+        
+            .card-text {
+                @include font(1.8rem,
+                    400,
+                    var(--grey-1));
+            }
+        
+            @include bp(sm) {
+                .card-text {
+                    @include font(1.8rem);
+                }
+            }
+        
+            @include bp(md) {
+                .card {
+                    max-width: 100%;
+                    max-height: max-content;
+                    min-height: max-content;
+                    padding: 2rem 1rem;
+                    width: 32rem;
+                    margin: 0 auto;
+                }
+                .card-img {
+                    height: auto;
+                }
+                .card-img-logo{
+                    margin: 0 auto 0rem;
+                }
+                .card-footer {
+                    margin-bottom: 1.25rem;
+                    padding: 2rem 0 2rem;
+                }
+            }
+        }
+        .slick-prev{
+            left: -8rem;
+            background: transparent;
+        }
+        .slick-next{
+            right: -8rem;
+            background: transparent;
+        }        
+    }
+    @include bp(md) {
+        margin: 2rem 0 0rem;
+    .passenger-slider-content{
+            max-width: 100%; 
+            .slick-prev{
+                left: 38%;
+                top: inherit;
+                bottom: -3%;
+            }
+            .slick-next{
+                right: 38%;
+                top: inherit;
+                bottom:-3%;
+            }
+        } 
+    }
+    @include bp(lg) {
+        .passenger-slider-content{
+            max-width: 98rem; 
+        }
+    }
+}

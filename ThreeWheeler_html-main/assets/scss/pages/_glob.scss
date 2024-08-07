@@ -1,0 +1,273 @@
+.glob-wrapper {
+    padding-top: 7rem;
+    padding-bottom: 5rem; 
+    @include bp(md) { 
+        padding-top: 5rem;
+        padding-bottom: 0rem;
+        @include bg-img(url('../images/glob-bg.png'),
+        center top,
+        100% 60%);
+        &.mobile-glob-visible{
+            background-size: cover;
+            padding-bottom: 3rem
+        }
+    }
+}
+.glob-wrapper-inner { 
+    @include bg-img(url('../images/glob-bg-web.png'),
+    center top,
+    cover);
+    padding-bottom: 8rem;
+    @include bp(md) {
+        // height: calc(100vh - 0vh);
+        padding-top: 1rem;
+        padding-bottom: 0rem;
+        background: none;
+    //     @include bg-img(url('../images/glob-bg.png'),
+    // center top,
+    // 100% 65%);
+    }
+}
+.glob-main {
+    width: 35rem;
+    margin: 3rem auto 5rem;
+    position: relative; 
+    @include bp(md) {
+        width: 27rem; 
+        &+.col-lg-12{
+            padding: 0;
+        }
+    }
+}
+.glob-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    .glob-tvs-logo{
+        justify-content: center;
+        max-width: 17.2rem;
+        img{
+            max-width: 100%;
+        }
+    }
+    h1{
+        @include font(3rem, 800, var(--grey-1)); 
+        padding: 2rem 0 0;
+        margin: 0;
+        line-height: 1.2;
+    }
+    h2{
+        @include font(3rem, 800, var(--grey-1)); 
+        padding: 0rem 0 2rem;
+        margin: 0;
+        line-height: 1.2;
+    }
+    p{
+        @include font(1.6rem, 400, var(--grey-1)); 
+        max-width: 100rem;
+        text-align: center;
+        margin: 0;
+        line-height: normal;
+    }
+    @include bp(md) {
+        .glob-tvs-logo{
+            max-width: 13.2rem;
+        }
+        h1{
+            @include font(2.2rem, 700);
+        }
+        h2{
+            padding: 1rem 3rem 2rem;
+            margin: 0 auto;
+            @include font(2.2rem, 700);
+            text-align: center;
+        }
+        p{
+            @include font(1.4rem);
+            padding: 0 2rem 2.4rem;  
+            text-align: justify;
+        }
+    }
+}
+.glob-rickshaws{
+    @include font(1.6rem, 400, var(--grey-1));
+    display: flex;
+    justify-content: center;
+    max-width: 80rem;
+    padding: 2rem 0 0rem;
+    margin: 0 auto;
+    text-align: center;
+    line-height: normal;
+    @include bp(md) {
+        @include font(1.4rem, 400, var(--grey-1));
+        padding: 0 2rem; 
+        text-align: justify;
+    }
+}
+/*Right Side Nav*/ 
+.three-w-right-side {
+    display: block;
+    a { 
+        right: -13.5rem;
+        transition: 0.3s;
+        padding: .9rem .8rem;
+        min-width: 17rem;
+        text-decoration: none;
+        @include font(1.8rem, 500, var(--blue)); 
+        @include radius(1rem 0 0 1rem);
+        margin-top: 5%;
+        position: fixed;
+        background: linear-gradient(to bottom, var(--grey-4) 4%, var(--white) 96%);
+        border: 1px solid var(--blue);
+        z-index: 999;
+        .icon-plus{
+            &:before{
+                @include font(1.4rem, null, var(--blue));
+                padding: 0.5rem 0.6rem;
+            }
+        }
+        &:hover {
+            right: -0.5rem;
+        }
+        &.one-vehicle {
+            top: 25%; 
+        }
+        &.bulk-vehicles {
+            top: 34%; 
+        }
+        &.dealership {
+            top: 43%;
+            right: -17rem;
+            &:hover {
+                right: -0.5rem;
+            }
+        }
+    }
+    @include bp(md) {
+        display: none;
+    }
+} 
+.three-w-bottom-side{
+    display: none;
+    @include bp(md) {
+        display: block;
+        position: relative;
+        .three-w-bottom{
+            position: fixed;
+            bottom: 0;
+            z-index: 999;
+            background: var(--white);
+            width: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            padding: 1rem 0rem 1.5rem;
+            box-shadow: 6px 0px 20px 0 rgb(0 0 0 / 16%);
+            h2{
+                @include font(1.8rem, 600, var(--grey-1));
+                margin-bottom: 1rem;
+            }
+            .three-w-btn{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                padding: 0 1rem;
+                a{
+                    @include font(1.2rem, 500, var(--blue)); 
+                    @include radius(.8rem); 
+                    background: linear-gradient(to right, var(--grey-13) 4%, var(--white) 96%);
+                    border: 1px solid var(--blue);
+                    padding: 0.8rem 1rem;
+                }
+            }
+        }
+        
+    }
+}
+.counter{
+    // background: rgba(black, .05);
+    padding: 2.5rem 2.5rem 4rem; 
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    li{
+      flex: 1;
+      text-align: center;
+      @include font(4.4rem, 700, var(--grey-1));
+      span{
+        &.percent{
+            &:after {
+                content: "";
+                display: inline-block;
+              }
+        }
+      }
+      p{
+        margin: 0;
+        @include font(1.8rem, 400, var(--grey-1));
+      }
+    } 
+    @include bp(md) {
+        padding: 2.5rem 0rem;
+        li{
+            @include font(2.2rem, 700, var(--grey-1));
+            p{ 
+                @include font(1.4rem, 400, var(--grey-1));
+            }
+        }
+    }
+}
+.show-content-web{
+    margin: 0 auto;
+    max-width: 96rem;
+    transition-delay: 0s;
+    transition: visibility 0s linear 0.33s, opacity 0.33s linear;
+    p{            
+        @include font(1.6rem, 500, var(--grey-1)); 
+        text-align: justify;
+        padding: 0.5rem 0rem;
+        margin: 0;
+        span{
+            font-weight: 700;
+            padding: 0 .5rem;
+            cursor: pointer;
+            color: var(--blue-01);
+        }
+    } 
+    .show-more-content-web{
+        &.xyz{
+            display: none;
+        }
+        transition-delay: 0s;
+            transition: visibility 0s linear 0.33s, opacity 0.33s linear;
+    }
+    @include bp(md) {
+        display: none;
+    }
+}
+.show-content-mobile{
+    display: none;
+    @include bp(md) {
+        display: block;
+        margin: 0 auto;
+        max-width: 96rem;
+    p{            
+        @include font(1.4rem, 500, var(--grey-1)); 
+        text-align: justify;
+        padding: 0.5rem;
+        margin: 0;
+        span{
+            font-weight: 700;
+            padding: 0 .5rem;
+            color: var(--blue-01);
+        }
+    } 
+    }
+}
